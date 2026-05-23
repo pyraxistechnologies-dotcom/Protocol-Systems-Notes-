@@ -1,0 +1,27 @@
+Pattern: Airdrop reflex loop
+Participants optimize for point farming or one off rewards instead of durable protocol usage.
+Observed in: Consumer crypto apps, incentive launch chains, points to token programs.
+Behavior: Activity spikes around reward windows, then falls off hard once emissions or speculation fades.
+Risk impl: Growth metrics become misleading because they measure extraction behavior, not adoption.
+Frequency: high
+
+Pattern: Yield masking product market fit
+Subsidies hide the fact that demand disappears when incentives are removed.
+Observed in: DeFi liquidity programs, restaking style incentive layers, liquidity bootstrapping protocols.
+Behavior: TVL and volume look strong during emissions, then collapse when the subsidy ends.
+Risk impl: The protocol confuses liquidity rental with true economic demand.
+Frequency: high
+
+Pattern: Reward inversion
+Users who create long term value are paid less than the users who game short term metrics.
+Observed in: Points systems, social protocols, marketplace incentive schemes.
+Behavior: High frequency, low quality actions get rewarded more cleanly than slower, higher value contributions.
+Risk impl: The system trains participants to behave against the protocol’s real objectives.
+Frequency: medium
+
+Pattern: Emissions dependency trap
+The protocol cannot remove incentives without breaking the activity it created.
+Observed in: Token launch chains, liquidity mining protocols, growth stage governance systems.
+Behavior: Every attempt to reduce rewards triggers complaints, activity drop-off, or governance resistance.
+Risk impl: The protocol becomes locked into subsidizing its own illusion of health.
+Frequency: high
