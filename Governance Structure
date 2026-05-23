@@ -1,5 +1,28 @@
+Pattern: Capture by delegation
 Governance becomes formally decentralized but practically steerable through delegation concentration.
 Observed: L1 governance, DAO voting systems, staking-based governance chains.
 Behavior: A small set of delegates or whales repeatedly shape outcomes, while the broader holder base stays passive.
 Risk Imp: The protocol can look decentralized on paper while decision rights remain concentrated in a few hands.
 The frequency of this is high.
+
+Pattern: Emergency drift process
+Exception powers start as temporary safeguards and gradually become normal governance tools.
+Observed in: Treasury-controlled protocols, admin-key heavy systems, upgradeable governance chains.
+Behavior: Emergency actions, pause rights, or special committees get reused for ordinary disputes or design changes.
+Risk Imp: Users inherit governance rules that can be overridden when pressure rises, weakening trust in finality.
+The frequency of this is medium 
+
+Pattern:Forum first legitimacy 
+Governance appears legitimate because discussion are public, even when decision power sits elsewhere.
+Observed in: Proposal driven DAOs, token governed communities, multi layer governance stacks.
+Behavior: Proposal discussions, but the real decision often happens in private coordinatined ones before votes.
+Risk Imp: Clients misread process transparency as actual control transparency.
+The frequency of this is high
+
+Pattern: Process over state
+Governance celebrates procedure while ignoring the actual system state the procedure controls.
+Observed in: Mature DAO governance, ecosystem councils, grant systems.
+Behavior: Teams focus on proposal formats, quorums, and cadence, but not on treasury concentration, veto paths, or dependency maps.
+Risk Impl: The protocol can pass governance motions while remaining structurally fragile.
+The frequency of this is medium 
+
