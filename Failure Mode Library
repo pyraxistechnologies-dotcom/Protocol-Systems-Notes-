@@ -1,0 +1,27 @@
+Pattern: Silent centralization
+The system presents as distributed while core controls quietly become consolidated.
+Observed in: Governance heavy chains, validator governed systems, admin upgrade protocols.
+Behavior: A few operators, multisigs, or infrastructure providers become the real control plane.
+Risk impl: The protocol’s resilience is overstated because the single points of failure are hidden in plain sight.
+Frequency: high
+
+Pattern: Incentive capture spiral
+Once one actor learns how to farm the system, others copy the pattern until the whole protocol degrades.
+Observed in: Token incentive networks, reputation systems.
+Behavior: Honest users either imitate the exploitative behavior or exit.
+Risk impl: The protocol rewards the worst adaptation first and then normalizes it.
+Frequency: high
+
+Pattern: Governance theater
+Governance continues to function as a public ritual after real decision making has already moved elsewhere.
+Observed in: DAOs, token holder voting systems, foundation governed ecosystems.
+Behavior: Votes happen, but outcomes are shaped by prior coordination, legal control, or off chain influence.
+Risk impl: Stakeholders misprice their actual influence and underestimate capture risk.
+Frequency: medium
+
+Pattern: Recovery path collapse
+When something fails, the protocol has no clean way to restore trust, liquidity, or operating continuity.
+Observed in: Cross chain systems, agent execution networks.
+Behavior: Incident response becomes ad hoc, slow, and politically contested.
+Risk impl: The first failure becomes a confidence event, not just a technical event.
+Frequency: medium
