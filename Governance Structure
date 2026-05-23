@@ -1,0 +1,23 @@
+Pattern:
+Centralized Emergency Override Drift
+
+Systems marketed as decentralized often retain hidden emergency override authority that expands over time during incidents or upgrades.
+
+Observed in:
+- DAO-style governance systems
+- early-stage DeFi protocols
+- hybrid on-chain/off-chain governance systems
+
+Behavior:
+- Emergency multisig or admin keys are activated for upgrades or crisis events
+- Temporary control becomes semi-permanent operational control
+- Governance votes are bypassed for speed
+- Authority consolidates in core contributors
+
+Risk implication:
+- Creates structural contradiction between “decentralized narrative” and “centralized execution”
+- Leads to governance legitimacy erosion under stress events
+- Increases regulatory and community trust risk over time
+
+Frequency:
+high
