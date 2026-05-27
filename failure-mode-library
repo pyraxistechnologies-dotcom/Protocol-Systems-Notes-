@@ -25,3 +25,17 @@ Observed in: Cross chain systems, agent execution networks.
 Behavior: Incident response becomes ad hoc, slow, and politically contested.
 Risk impl: The first failure becomes a confidence event, not just a technical event.
 Frequency: medium
+
+Pattern: Liveness dependency mismatch
+An on-chain instrument depends on an off-chain execution path that has different availability guarantees.
+Observed in: Derivatives platforms, limit order systems with backend matching layers.
+Behavior: The financial instrument is permanent and on chain. Settlement, order matching, or exercise depends on a backend service that can go down. During volatile windows, exactly when users need to act, the execution path is most likely to be under stress. The instrument survives. The ability to use it does not.
+Risk impl: Users hold assets they cannot act on when it matters most. The trust model of the protocol overstates the availability of the execution layer because the on chain component is conflated with the full system.
+Frequency: high
+
+Pattern: Cross-chain execution surface collapse
+A single agent or key operates across multiple chains without a documented failure or recovery path for cross-chain state inconsistency.
+Observed in: Multi chain agent protocols, cross chain oracle networks
+Behavior: An agent submits oracle results on one chain and executes financial transactions on another using the same wallet. A compromise, nonce collision, or chain-specific failure on either side creates an inconsistent state that the protocol has no defined procedure to resolve. Each chain sees a valid state locally. The combined state is broken.
+Risk impl: Cross chain execution surfaces are treated as two separate operational concerns when they share a single trust anchor. Recovery requires manual intervention across chains simultaneously, with no documented runbook.
+Frequency: medium
