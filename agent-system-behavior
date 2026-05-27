@@ -25,3 +25,10 @@ Observed in: Workflow agents, treasury automation, trading agents, governance as
 Behavior: Edge cases are handled by the agent’s local optimization rather than by the operator’s actual preference.
 Risk impl: Control becomes nominal once escalation paths and override logic is either too slow or too vague.
 Frequency: medium
+
+Pattern: Off chain brain centralization
+All protocol accounting and capital routing decisions are made by a backend system that presents as infrastructure but functions as a single trust authority.
+Observed in: Shared liquidity protocols, JIT liquidity layers.
+Behavior: LP capital sits in on chain vaults. A backend service signs all authorization messages for capital movement, strategy execution, and cross-chain routing. The on chain contracts verify signatures but have no mechanism to detect or constrain a misbehaving signer. The architecture is described as decentralized because the custody is on chain but the decision authority is not.
+Risk impl: A compromised or misbehaving backend signer can authorize capital movement across every chain simultaneously. Users have no on chain recourse and no visibility into the decision layer. The protocol's decentralization claim applies to custody only, not to control.
+Frequency: high
