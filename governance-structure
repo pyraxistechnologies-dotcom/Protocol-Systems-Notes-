@@ -3,26 +3,40 @@ Governance becomes formally decentralized but practically steerable through dele
 Observed: L1 governance, DAO voting systems, staking-based governance chains.
 Behavior: A small set of delegates or whales repeatedly shape outcomes, while the broader holder base stays passive.
 Risk Imp: The protocol can look decentralized on paper while decision rights remain concentrated in a few hands.
-The frequency of this is high
+Frequency: high
 
 Pattern: Emergency drift process
 Exception powers start as temporary safeguards and gradually become normal governance tools.
 Observed in: Treasury-controlled protocols, admin-key heavy systems, upgradeable governance chains.
 Behavior: Emergency actions, pause rights, or special committees get reused for ordinary disputes or design changes.
 Risk Imp: Users inherit governance rules that can be overridden when pressure rises, weakening trust in finality.
-The frequency of this is medium 
+Frequency: medium
 
 Pattern:Forum first legitimacy 
 Governance appears legitimate because discussion are public, even when decision power sits elsewhere.
 Observed in: Proposal driven DAOs, token governed communities, multi layer governance stacks.
 Behavior: Proposal discussions, but the real decision often happens in private coordinatined ones before votes.
 Risk Imp: Clients misread process transparency as actual control transparency.
-The frequency of this is high
+frequency: high
 
 Pattern: Process over state
 Governance celebrates procedure while ignoring the actual system state the procedure controls.
 Observed in: Mature DAO governance, ecosystem councils, grant systems.
 Behavior: Teams focus on proposal formats, quorums, and cadence, but not on treasury concentration, veto paths, or dependency maps.
 Risk Impl: The protocol can pass governance motions while remaining structurally fragile.
-The frequency of this is medium 
+Frequency: medium
+
+Pattern: Cold-start governance gap
+Abuse prevention mechanisms assume an established community capable of social coordination.
+Observed in: Community treasury protocols, crowdfund revival platform
+Behavior: Quorum thresholds, abort mechanisms, and proposal delays all function correctly in steady state. In the first 30 days of a live pool with a small number of unfamiliar contributors, none of these mechanisms have the social infrastructure to activate in time. Nobody is watching closely enough, nobody knows who to trust and the community has no shared reputation signal to act on.
+Risk impl: Early pools are structurally more vulnerable to coordination failure and low-friction extraction than the security model acknowledges. The cold-start window is the highest-risk lifecycle stage and the least documented one.
+Frequency:high
+
+Pattern: Snapshot oracle trust
+A zero-knowledge proof verifies membership in a tree but places no constraint on who constructed the tree or whether it is honest.
+Observed in: ZK based voting systems, privacy preserving governance plugins
+Behavior: The trust assumption sits one layer below it whoever posts the snapshot root controls what identities and balances are eligible. The proof proves inclusion. It does not prove the tree is correct.
+Risk impl: The privacy and fairness guarantees of the ZK layer rest on an off chain oracle assumption that is rarely surfaced in documentation or security models. A compromised or biased snapshot operator can shape outcomes without ever breaking the proof system.
+Frequency: medium
 
