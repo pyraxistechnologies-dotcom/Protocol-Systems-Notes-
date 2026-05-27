@@ -25,3 +25,17 @@ Observed in: Token launch chains, liquidity mining protocols, growth stage gover
 Behavior: Every attempt to reduce rewards triggers complaints, activity drop-off, or governance resistance.
 Risk impl: The protocol becomes locked into subsidizing its own illusion of health.
 Frequency: high
+
+Pattern: Quorum math exploitation 
+Anti whale caps creating a threshold below which coordinated actors can reliably control outcomes without triggering abuse detection.
+Observed in: Token weighted governance systems, community treasury pools.
+Behavior: A voting weight cap per wallet is designed to prevent whale dominance. But if the quorum threshold can be reached by a small number of coordinated wallets each sitting just below the cap, the protection becomes nominal. The system flags no individual actor as dominant while the aggregate outcome is controlled.
+Risk impl: The governance design appears robust at the single actor level while remaining exploitable at the coordination layer. Sybil resistance and whale resistance are treated as the same problem when they require different mitigations.
+Frequency: medium
+
+Pattern: Ceremony trust decay
+The social proof around a cryptographic trusted setup thins over time as the novelty of the ceremony fades and contributor legibility disappears.
+Observed in: Groth16-based ZK protocols, phase-2 ceremony dependent privacy infrastructure.
+Behavior: At launch, ceremony contributors are known and the setup feels credible. Over time, contributors become harder to verify, attestations get buried in documentation, and new circuits ship with quiet ceremonies that receive less scrutiny than the original. Each new ceremony resets the trust assumption without anyone formally acknowledging it.
+Risk impl: The protocol's privacy claims rest on a social trust layer that degrades passively. Users and integrators cannot verify the assumption without archaeology. A challenge, even an unfounded one, finds no clean response path.
+Frequency: medium
