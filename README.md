@@ -67,31 +67,31 @@ It is the capacity to apply them correctly with incomplete information against t
 The patterns in this library map to five structural failure surfaces that appear consistently across governance-heavy, incentive-driven, and agent-coordinated systems:
 
 ## Governance capture
-Power is concentrated where it claims to be distributed.
+Power is concentrated where it claims to be distributed
 
 ## Incentive fragility
-The protocol rewards extraction faster than it builds durable value.
+The protocol rewards extraction faster than it builds durable value
 
 ## Coordination failure
-The system depends on behavior it cannot guarantee.
+The system depends on behavior it cannot guarantee
 
 ## Treasury centralization
-Decentralization is cosmetic — control is still held by few.
+Decentralization control is held by few
 
 ## Agent manipulation
-Autonomous systems can be economically weaponized.
+Autonomous systems can be economically weaponized
 
 ---
 
 These five surfaces are not independent.
 
-In practice they interact, amplify each other, and mask each other.
+In practice they interact, amplify each other, and mask each other
 
-A governance capture problem often looks like a coordination failure until you trace the incentive structure underneath it.
+A governance capture problem looks like a coordination failure until you trace the incentive structure underneath it
 
-An agent manipulation vector often remains invisible until emissions dependency has already locked the protocol into the behavior the agent is exploiting.
+An agent manipulation vector remains invisible until emissions dependency has already locked the protocol into the behavior the agent is exploiting.
 
-Simply reading the surfaces is not the same as reading the system.
+Reading the surfaces is not the same as reading the system
 # 5. Repository structure
 
 ```` text
