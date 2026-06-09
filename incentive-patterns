@@ -39,3 +39,26 @@ Observed in: Groth16-based ZK protocols, phase-2 ceremony dependent privacy infr
 Behavior: At launch, ceremony contributors are known and the setup feels credible. Over time, contributors become harder to verify, attestations get buried in documentation, and new circuits ship with quiet ceremonies that receive less scrutiny than the original. Each new ceremony resets the trust assumption without anyone formally acknowledging it.
 Risk impl: The protocol's privacy claims rest on a social trust layer that degrades passively. Users and integrators cannot verify the assumption without archaeology. A challenge, even an unfounded one, finds no clean response path.
 Frequency: medium
+
+Pattern: Tiered Access Front-Running
+Differential signal timing creates extractable value for early recipients at the direct expense of later recipients
+Observed in: Trading signal platforms, prediction market alert systems, DeFi analytics protocols
+Behavior: Premium participants receive actionable intelligence before public participants. The time delta between tiers creates a structured extraction window where informed participants systematically advantage themselves against uninformed ones
+Risk Impl: Trust erosion as public participants recognize the structural disadvantage. Regulatory exposure in jurisdictions treating differential signal distribution as market manipulation.
+Frequency: high
+Confidence: Established - the mechanism is well documented in traditional finance under front running and selective disclosure frameworks; the Web3 manifestation is newer but structurally identical
+
+Pattern: Stake weighted plutocracy
+Active voting bodies are selected purely by stake size. Governance outcomes therefore reflect capital concentration rather than informed judgment. A sufficiently capitalized actor can dominate the active set without ever producing a provably wrong output making slashing ineffective as a deterrent.
+Observed: DAO governance systems, liquid staking token governance, oracle committee selection, validator voting systems, treasury allocation voting, bug bounty judgment networks
+Behavior: Voting power tracks capital holdings. The largest holders define validity, set parameters, and control escalation paths. Coordinated behavior among top holders is rational and undetectable when each individual action remains within policy bounds. The governance surface appears decentralized while control is structurally concentrated.
+Risk Impl: Consensus becomes capital selection rather than judgment aggregation. Denial, censorship, and selective confirmation become available attack vectors. Slashing catches provably wrong individual judgments but misses coordinated threshold behavior.
+Confidence: Canonical — extensively documented across DAO governance research, LST governance incidents, and oracle manipulation case studies 
+
+Pattern: Reputation Without Behavioral Anchor
+Reputation systems accumulate scores based on activity metrics (execution count, finding volume, transaction frequency) rather than alignment with protocol objectives. 
+Observed: Bug bounty reputation systems, agent identity registries, validator track records, DeFi protocol contributor scores
+Behavior: High reputation actors gain privileged access, reduced scrutiny, or governance weight. Behavioral drift occurs without triggering reputation decay because the metrics being tracked are orthogonal to the behaviors that matter. Trust scores continue rising despite strategic misalignment.
+Risk Impl: Actors causing disproportionate damage precisely because their reputation suppresses the scrutiny that would otherwise detect drift.
+Confidence: Emerging — two confirmed protocol observations; the mechanism is theoretically well established but on chain manifestations are still early
+
