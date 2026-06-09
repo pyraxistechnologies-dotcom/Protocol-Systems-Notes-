@@ -31,7 +31,7 @@ Abuse prevention mechanisms assume an established community capable of social co
 Observed in: Community treasury protocols, crowdfund revival platform
 Behavior: Quorum thresholds, abort mechanisms, and proposal delays all function correctly in steady state. In the first 30 days of a live pool with a small number of unfamiliar contributors, none of these mechanisms have the social infrastructure to activate in time. Nobody is watching closely enough, nobody knows who to trust and the community has no shared reputation signal to act on.
 Risk impl: Early pools are structurally more vulnerable to coordination failure and low-friction extraction than the security model acknowledges. The cold-start window is the highest-risk lifecycle stage and the least documented one.
-Frequency:high
+Frequency: high
 
 Pattern: Snapshot oracle trust
 A zero-knowledge proof verifies membership in a tree but places no constraint on who constructed the tree or whether it is honest.
@@ -39,4 +39,24 @@ Observed in: ZK based voting systems, privacy preserving governance plugins
 Behavior: The trust assumption sits one layer below it whoever posts the snapshot root controls what identities and balances are eligible. The proof proves inclusion. It does not prove the tree is correct.
 Risk impl: The privacy and fairness guarantees of the ZK layer rest on an off chain oracle assumption that is rarely surfaced in documentation or security models. A compromised or biased snapshot operator can shape outcomes without ever breaking the proof system.
 Frequency: medium
+
+Pattern: Ungoverned Governance Layer
+The absence of a governed update process means governance legitimacy depends entirely on the trustworthiness of whoever holds update authority, rather than on the process through which updates occur.
+Observed: Agent governance frameworks, DAO voting parameter systems, compliance infrastructure, data licensing policy engines
+Behavior: Governance exists for participants but not for governance itself. When the governance rules need to change, the change happens through informal channels. Participants who disagree with the change have no governed process for contesting it. The protocol appears to have governance while its most important decisions what the governance rules are remain ungoverned.
+Risk Impl: Rule changes occur through informal authority rather than governed processes. The protocol is vulnerable to governance capture at the meta-level even when the object level governance appears robust.
+Confidence: Established — documented across DAO governance research; observable in most early-stage protocol governance systems
+
+Pattern: Single Settler Authority
+The role is implemented as a backend function or trusted key rather than a governance actor. No accountability layer, appeal path, or governed update process constrains the role's behavior.
+Observed: Protocol fee controllers, emergency multisig holders, batch execution sequencers
+Behavior: The role controls consequential parameters within formal policy bounds while remaining ungoverned in practice. Participants have no mechanism to contest decisions made by the role, appeal outcomes, or trigger accountability. The role appears technical while functioning as a governance authority.
+Risk Impl: A single point of governance failure with no accountability surface. Collusion, capture, or malfunction at the role level affects all participants simultaneously.
+Confidence: Established — observable across DeFi sequencer governance, oracle operator systems and protocol admin key management
+
+Pattern: Swarm Consensus Without Arbitration
+Observed: The multi agent architecture creates the appearance of independent verification while leaving conflict resolution implicit or delegated to whichever agent output is processed last.
+Behavior: Multiple agents produce outputs. When outputs conflict, the conflict resolution path is either absent, informal, or delegated to an upstream aggregation step that was not designed for governance. Consequential decisions are made on the basis of unresolved disagreements without surfacing the disagreement to any accountable decision maker.
+Risk Impl: In institutional contexts, unresolved agent disagreement is a compliance failure before it is a technical one. Downstream decisions based on unresolved conflicts carry governance liability.
+Confidence: Emerging — two confirmed protocol observations; the pattern will become critical as multi agent systems are deployed in institutional contexts.
 
